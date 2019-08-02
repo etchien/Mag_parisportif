@@ -1,0 +1,45 @@
+{%load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>inscription</title>
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="{% static 'bootstrap/dist/css/bootstrap.min.css' %}">
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="{% static 'bootstrap/dist/css/bootstrap.min.css' %}">
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="{% static 'bootstrap/js/jquery-3.1.1.min.js' %}"></script>
+      <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+       <link rel="stylesheet" href="{% static 'css/inscription.css' %}">
+</head>
+<body style="background-image: url({% static 'images/stade.jpg' %});
+background-repeat: no-repeat;
+background-position: center center;
+background-attachment: fixed;
+background-size: cover;  ">
+
+    <h1>Veillez renseigner les champs pour vous inscrire</h1>
+
+    <nav style="background-color: white;position: fixed;">
+                  <ul class="nav nav-pills">
+                      <li role="presentation" ><a href="{% url 'home' %}">accueil</a></li>
+                  </ul>
+              </nav>
+    <form  method="post">
+    {% csrf_token %}
+      {{f.as_p | safe }}
+        <br>
+        <br>
+        <button type="submit">S'enregister</button>
+    </form>
+
+  </div>
+
+</body>
+</html>
+
+

@@ -1,0 +1,18 @@
+{%load static %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>profil parieur</title>
+</head>
+<body>
+    <h4>Votre Profil</h4>
+
+<h1>PROFIL PAGE {{ user.username }}</h1>
+
+<a href="{% url 'mylogout' %}">Deconnexion</a>
+
+
+</body>
+</html>

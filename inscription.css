@@ -1,0 +1,58 @@
+body{
+  background-color: #ADFF2F;
+}
+
+h1{
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: orange;
+}
+
+form{
+  position: center;
+  top:50%;
+   left:50%;
+   width:500px; /* A toi de donner la bonne largeur */
+   height:400px; /* A toi de donner la bonne hauteur */
+   margin-left:-150px; /* -largeur/2 */
+   margin-top:-100px; /* -hauteur/2 */
+   background:#FFE4C4;
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+}
+
+form div + div {
+  margin-top: 1em;
+}
+
+label {
+  /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+}
+
+input {
+  /* Pour s'assurer que tous les champs texte ont la même police.
+     Par défaut, les textarea ont une police monospace */
+  font: 1em sans-serif;
+  padding-top: 10px;
+
+  /* Pour que tous les champs texte aient la même dimension */
+  width: 200px;
+  box-sizing: border-box;
+
+  /* Pour harmoniser le look & feel des bordures des champs texte */
+  border: 1px solid #999;
+}
+
+input:focus{
+  /* Pour souligner légèrement les éléments actifs */
+  border-color: #000;
+}
+
+
+
+

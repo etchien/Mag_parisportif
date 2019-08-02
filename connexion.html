@@ -1,0 +1,52 @@
+{%load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>connexion</title>
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="{% static 'bootstrap/dist/css/bootstrap.min.css' %}">
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="{% static 'bootstrap/dist/css/bootstrap.min.css' %}">
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="{% static 'bootstrap/js/jquery-3.1.1.min.js' %}"></script>
+      <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+       <link rel="stylesheet" href="{% static 'css/inscription.css' %}">
+</head>
+<body style="background-image: url({% static 'images/victoire.jpg' %});
+background-repeat: no-repeat;
+background-position: center center;
+background-attachment: fixed;
+background-size: cover;  ">
+
+    <h1>Veillez renseigner les champs pour vous connecter</h1>
+
+     <nav style="background-color: white;position: fixed;">
+                  <ul class="nav nav-pills">
+                      <li role="presentation" ><a href="{% url 'home' %}">accueil</a></li>
+                  </ul>
+              </nav>
+
+    <form action="{% url 'profil' %}" method="post">
+    {% csrf_token %}
+      <div>
+        <label for="name">Nom:</label>
+        <input type="text" name="username" placeholder="votre nom svp">
+      </div>
+      <div>
+        <label for="password">mot de passe:</label>
+        <input type="password" name="password" placeholder="votre mot de passe">
+      </div>
+      <br>
+      <input type="submit" value=" Valider ">
+    </form>
+
+  </div>
+
+</body>
+</html>
+
+
